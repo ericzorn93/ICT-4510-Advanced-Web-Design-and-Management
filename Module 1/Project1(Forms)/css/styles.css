@@ -34,6 +34,15 @@
     background-color: darkblue;
 }
 
+#indexBody {
+    background-color: #0079ff;
+    color: white;
+}
+
+#indexBody .jumbotron {
+    color: black;
+}
+
 /* This is the Image */
 #thumbsUp {
     margin-left: 42%;
