@@ -1,0 +1,41 @@
+/* ==========================================================================
+    Eric Zorn - Module 4 Assignment (Geolocation API) 9.21.17
+   ========================================================================== */
+
+body {
+    background-color: darkslategrey;
+    color: white;
+    font-family: sans-serif;
+}
+
+#title {
+    color: darkslategrey;
+}
+
+.keyMapCoords {
+    color: white;
+    background-color: #8a6d3b;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+#distance {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#location {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
