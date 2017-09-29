@@ -1,0 +1,3 @@
+# ICT-4510-Advanced-Web-Design-and-Management: Module 1 (Forms)
+
+In this project, we used HTML5 along with CSS3 and **Bootstrap** to be able to create a web form that would be commonly seen in any website for contact or other information inquiries. I also programmed and linked my own version of some small form validation using **`JavaScript`** from what I had learned in ICT 4510: Web Scripting with JavaScript. I used BootStrap for some styling, as well as some custom styling of my own. In the HTML5 section, we used pseudo selectors and attributes like required, autofocus, and invalid for the form to include extra validation without JavaScript. I hope you enjoy viewing this project! This is our first assignment from Module 1 of **`ICT 4510`**.

@@ -1,0 +1,49 @@
+/* Eric Zorn: Module 1 (Forms) ICT 4510 */
+
+.header-font {
+    margin-top: 5%;
+}
+
+.first-section {
+    margin-top: 40px;
+}
+
+.contact-form input {
+    width: 40%;
+}
+
+.contact-form input:required {
+    border: 4px solid blue;
+}
+
+.contact-form input:focus {
+    border: 1px solid green;
+    background-color: lightgrey;
+    color: green;
+}
+
+.contact-form input:invalid {
+    border: 4px solid red;
+}
+
+.submitted-text {
+    color: red;
+}
+
+.submitBody {
+    background-color: darkblue;
+}
+
+#indexBody {
+    background-color: #0079ff;
+    color: white;
+}
+
+#indexBody .jumbotron {
+    color: black;
+}
+
+/* This is the Image */
+#thumbsUp {
+    margin-left: 42%;
+}

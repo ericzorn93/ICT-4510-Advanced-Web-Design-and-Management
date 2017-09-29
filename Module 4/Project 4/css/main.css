@@ -32,10 +32,21 @@ body {
     font-weight: 600;
 }
 
+.gm-style-iw {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: black;
+    color: #FFF;
+}
 
+#distanceCalc {
+    font-size: 24px;
+    font-weight: 700;
+}
 
-
-
-
-
-
+#mapTitle {
+    color: white;
+    text-align: center;
+    font-weight: 800;
+}
