@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--  Eric Zorn: Module 5 (Forms) with JavaScript and jQuery (jQuery Validation) ICT 4510 9/29/17-->
+<!--
+       I also wrote my own JavaScript for a little Form Validation and the file is linked from the first Module from week 1.
+       In addition to this, I also added the extension of the jQuery library with the jQuery Form Validation library.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eric Zorn ICT 4510 - Module 5 Project (Forms) with JS Output and jQuery Form Validation</title>
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body id="indexBody">
+
+<div class="container">
+    <header>
+        <h4 class="header-font">Eric Zorn ICT 4510 - Module 5 Project (Forms) w/ JavaScript Output &amp; jQuery Form Validation</h4>
+    </header>
+
+    <section class="first-section">
+        <form class="contact-form" id="myForm">
+            <div class="form-group row">
+                <label for="firstName" class="col-2 col-form-label">First Name:</label>
+                <input type="text" class="form-control" name="firstName" id="firstName" placeholder="Please Enter Your First Name" required="" autofocus> <span class="error-messasge" id="firstNameErrorMessage"></span>
+            </div>
+
+            <div class="form-group row">
+                <label for="lastName" class="col-2 col-form-label">Last Name:</label>
+                <input type="text" class="form-control" name="name" id="lastName" placeholder="Please Enter Your Last Name" required=""> <span class="error-messasge" id="lastNameErrorMessage"></span>
+            </div>
+
+            <div class="form-group row">
+                <label for="email" class="col-2 col-form-label">Email:</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Please Enter Your Email Address" required=""> <span class="error-messasge" id="emailErrorMessage"></span>
+            </div>
+
+            <div class="form-group row">
+                <label for="phoneNumber" class="col-2 col-form-label">Phone Number:</label>
+                <input type="tel" class="form-control" name="phone" id="phoneNumber" placeholder="Please Enter Your Phone Number"> <span class="error-messasge" id="phoneNumberErrorMessage"></span>
+            </div>
+
+            <aside>
+                <h4>What is your best way of being contacted?</h4>
+            </aside>
+
+            <div class="form-group row">
+                <label for="email" class="col-2 col-form-label">Email:</label>
+                <input type="radio" class="form-control" name="radio" id="emailRadio" placeholder="Yes"> <span class="error-messasge" id="emailRadioErrorMessage"></span>
+            </div>
+
+            <div class="form-group row">
+                <label for="phoneRadio" class="col-2 col-form-label">Phone:</label>
+                <input type="radio" class="form-control" name="radio" id="phoneRadio" placeholder="Yes"> <span class="error-messasge" id="phoneRadioErrorMessage"></span>
+            </div>
+
+            <button type="button" id="submitButton" class="btn btn-success">Submit Form</button>
+            <button type="reset" id="resetButton" class="btn btn-danger">Reset Form</button>
+
+            <br/><br/>
+        </form>
+
+        <section>
+
+            <div class="jumbotron inverse" id="myJumbotron">
+                <div>
+                    <h1 class="output-title">Form Values</h1>
+                    <ol id="formValues"></ol>
+                </div>
+            </div>
+
+            <div class="jumbotron jsonJumbotron">
+                <h2 class="jsonInputTitle">JSON Data Input</h2>
+                <h5 id="jsonData"></h5>
+            </div>
+
+        </section>
+
+        <form id="secondaryForm">
+            <input name="myName">
+        </form>
+
+        <br/><br/>
+        <div class="jumbotron" id="keyJumbotron">
+
+            <h4>Key for Input Styles</h4>
+            <ul>
+                <li>Blue Border: Required Input</li>
+                <li>Green Border with Light Grey Background &amp; Green Type: Focused Input</li>
+                <li>Red Solid Border: Invalid Inputs</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+
+
+<!--Scripts-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+
+<script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* Eric Zorn: Module 3 (Forms) with JavaScript and jQuery ICT 4510  9/29/17*/
+
+/*
+    This JavaScript assignment was part of our Module 5 in the ICT 4510 curriculum.
+    We took the past code from Module 3 regarding some of the HTML & CSS, as well as the JavaScript.
+    In this Module 5, I am adding the addition of the jQuery extension library called jQuery Validation for Form Validation.
+    This will be added to the current validation I have attempted to add on my own for the most part in
+    Vanilla JavaScript.
+ */
+
+.header-font {
+    margin-top: 5%;
+}
+
+.first-section {
+    margin-top: 40px;
+}
+
+.contact-form input {
+    width: 40%;
+}
+
+.contact-form input:required {
+    border: 4px solid blue;
+}
+
+.contact-form input:focus {
+    border: 1px solid green;
+    background-color: lightgrey;
+    color: green;
+}
+
+.contact-form input:invalid {
+    border: 4px solid red;
+}
+
+.submitted-text {
+    color: red;
+}
+
+.submitBody {
+    background-color: darkblue;
+}
+
+#indexBody {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+#indexBody .jumbotron {
+    color: black;
+}
+
+/* This is the Image */
+#thumbsUp {
+    margin-left: 42%;
+}
+
+.output-title {
+    font-weight: 800;
+    text-decoration: underline;
+    text-align: center;
+    color: 0079FF;
+}
+
+.error-messasge {
+    margin-left: 20px;
+}
+
+.jsonInputTitle {
+    text-decoration: underline;
+}

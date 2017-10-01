@@ -1,0 +1,57 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+.contact-form input:required { /*  , textarea:required  */
+    background: #fff url(../images/asterisk.png) no-repeat 98%; /* no-repeat 98% center */
+}
+
+.contact-form input:focus:invalid { /*  , .contact-form textarea:focus:invalid when a field is considered invalid by the browser */
+    background: #fff url(../images/invalid.png) no-repeat 98%; /* center */
+    box-shadow: 0 0 5px #d45252;
+    border-color: #b03535
+}
+
+/*
+.contact-form input:required:valid, .contact-form textarea:required:valid { /* when a field is considered valid by the browser 
+    background: #fff url(../images/valid.png) no-repeat 98%;  /*  center 
+    box-shadow: 0 0 5px #5cd053;
+    border-color: #28921f;
+}
+*/
