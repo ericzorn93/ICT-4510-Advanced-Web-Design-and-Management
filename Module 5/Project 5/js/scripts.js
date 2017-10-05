@@ -196,10 +196,6 @@ $(document).ready(loadAJAX); //AJAX Call and Response with jquery
 
 $(document).ready(function () {
     //Validate the form when submitted
-    $("#secondaryForm").validate({
-        rules: {
-            myName: "required"
-        }
-    });
+    $("#secondaryForm").validate();
 });
 
