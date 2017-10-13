@@ -6,12 +6,17 @@
     is known as Chart JS and is one of many that manipulate the HTML5 canvas element in different ways.
     Like it sounds, this library is really known for making animated and interactive charts
     and graphs for the developer. It shortens development time drastically and makes web page statistics
-    way more inviting for the user!
+    way more inviting for the user! I took the standard JSON and converted it to fit the API properties for the Pie Chart
+    and I also called the standard JSON from the Bar Chart JSON file. With the Bar Graph, we used a for each loop and assigned the proper
+    properties to the JSON data for the data to loop over in an array.
 */
 
 
 .header-font {
     margin-top: 5%;
+    font-size: 50px;
+    text-decoration: underline;
+    font-weight: 800;
 }
 
 .first-section {
@@ -45,7 +50,7 @@
 }
 
 #indexBody {
-    background-color: #F9E79F;
+    background-color: lightyellow;
     color: black;
 }
 
@@ -70,5 +75,14 @@
 }
 
 .jsonInputTitle {
+    text-decoration: underline;
+}
+
+canvas {
+    display: inline-block;
+}
+
+.title {
+    color: orangered;
     text-decoration: underline;
 }

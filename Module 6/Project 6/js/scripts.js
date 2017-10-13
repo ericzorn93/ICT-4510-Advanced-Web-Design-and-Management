@@ -6,60 +6,75 @@
     is known as Chart JS and is one of many that manipulate the HTML5 canvas element in different ways.
     Like it sounds, this library is really known for making animated and interactive charts
     and graphs for the developer. It shortens development time drastically and makes web page statistics
-    way more inviting for the user!
-*/
+    way more inviting for the user! I took the standard JSON and converted it to fit the API properties for the Pie Chart
+    and I also called the standard JSON from the Bar Chart JSON file. With the Bar Graph, we used a for each loop and assigned the proper
+    properties to the JSON data for the data to loop over in an array.
+    */
 
 
-var canvas = document.getElementById("myChart");
-var ctx = canvas.getContext("2d");
+    var ctx = document.getElementById("myChart").getContext("2d");
 
+    var ctx2 = document.getElementById("secondMyChart").getContext("2d");
 
-//AJAX Call One
-// $(document).ready(function(){
-//     $("#submitButton").click(function(){
-//         $.get("json/barchart-data.json", function(data, status){
-//             var chartData = JSON.parse(data);
-//             console.log(chartData);
-//             alert("Data: " + chartData.datasets + "\nStatus: " + status);
-//         });
-//     });
-// });
+    $(document).ready(function () {
 
 
 
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
+
+        /* ------------------------- Bar Chart -----------------------*/
+
+
+
+        $.ajax('json/barchart-data.json',   // request url
+        {
+                success: function (data, status, xhr) {// success callback function
+                    var barData = data;
+                    console.log(barData);
+                    console.log(status);
+                    console.log(xhr);
+
+                    barData.datasets.forEach(function (dataset) {
+                        var dataSetLength = dataset.data.length;
+
+                        var barColorArr = new Array(dataSetLength);
+
+                        barColorArr.fill(dataset.fillColor);
+
+                        dataset.backgroundColor = barColorArr;
+                    });
+
+
+                    let barChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: barData
+                    });
                 }
-            }]
-        }
+            });
+
+
+
+        /* ------------------------- Pie Chart -----------------------*/
+    //Vanilla JS Request
+    function loadPieChart() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function (data) {
+            if(this.readyState === 4 && this.status === 200) {
+                var pieChartData = JSON.parse(this.responseText);
+                console.log(pieChartData);
+
+
+                let pieChart = new Chart(ctx2, pieChartData);
+
+
+            }
+        };
+
+        xmlhttp.open("GET", "json/piechart-second.json", true);
+        xmlhttp.send();
     }
+    loadPieChart();
+
+
+
+
 });

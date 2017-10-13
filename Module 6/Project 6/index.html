@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <!--  Eric Zorn: Module 6 with JavaScript and Chart JS ICT 4510  10/4/17 -->
 <!--
-     In this project, we working with a very unique library that uses the HTML5 element,
+    In this project, we working with a very unique library that uses the HTML5 element,
     canvas, to its full potential to make some animated charts and graphs. This library
     is known as Chart JS and is one of many that manipulate the HTML5 canvas element in different ways.
     Like it sounds, this library is really known for making animated and interactive charts
     and graphs for the developer. It shortens development time drastically and makes web page statistics
-    way more inviting for the user!
+    way more inviting for the user! I took the standard JSON and converted it to fit the API properties for the Pie Chart
+    and I also called the standard JSON from the Bar Chart JSON file. With the Bar Graph, we used a for each loop and assigned the proper
+    properties to the JSON data for the data to loop over in an array.
 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Eric Zorn ICT 4510 - Module 6 Chart JS and the Canvas</title>
+    <title>Eric Zorn ICT 4510 - Module 6 Chart JS and the Canvas - 10/12/17</title>
 
     <!--Bootstrap CSS-->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -24,15 +26,27 @@
 <div class="container">
     <header>
         <h1 class="header-font">Eric Zorn ICT 4510 - Module 6 Project: Chart JS</h1>
+        <br/>
+        <p>In this project, we working with a very unique library that uses the HTML5 element,
+            canvas, to its full potential to make some animated charts and graphs. This library
+            is known as Chart JS and is one of many that manipulate the HTML5 canvas element in different ways.
+            Like it sounds, this library is really known for making animated and interactive charts
+            and graphs for the developer. It shortens development time drastically and makes web page statistics
+            way more inviting for the user! I took the standard JSON and converted it to fit the API properties for the Pie Chart
+            and I also called the standard JSON from the Bar Chart JSON file. With the Bar Graph, we used a for each loop and assigned the proper
+            properties to the JSON data for the data to loop over in an array.</p>
+
+         <strong><em>***Bar Chart is First and Pie Chart is Below/Second</em></strong>
     </header>
-    
-    <div id="demo"></div>
-    
-    <canvas id="myChart" width="500" height="400"></canvas>
 
-    <br/>
+    <br/><br/>
 
-    <button type="button" id="submitButton">Get Charts</button>
+    <h1 class="title">Bar Chart:</h1>
+    <canvas id="myChart" width="400" height="400"></canvas>
+
+    <br/><br/>
+    <h1 class="title">Pie Chart:</h1>
+    <canvas id="secondMyChart" width="400" height="400"></canvas>
 
 </div>
 
@@ -40,9 +54,10 @@
 
 <!--Scripts-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
+<!--<script src="js/bootstrap.min.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>-->
+
+<script src="js/Chart.bundle.min.js"></script>
 
 <!--Custom Scripts-->
 <script src="js/scripts.js"></script>
