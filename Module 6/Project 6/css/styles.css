@@ -86,3 +86,16 @@ canvas {
     color: orangered;
     text-decoration: underline;
 }
+
+div {
+    float: left;
+    margin-left: 10%;
+}
+
+.pieChart {
+    margin-bottom: -40%;
+}
+
+.pieChartTitle {
+    margin-top: -13%;
+}

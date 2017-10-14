@@ -2,9 +2,9 @@
 	"type": "pie",
 	"data": {
 		"labels": [
-			"Red", 
+			"Red",
          "Green",
-         "Yellow" 
+         "Yellow"
        ],
 		"datasets": [
 			{
